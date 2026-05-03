@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dataset - Iris ML</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to right, #260c32, #360a34, #3a0c5f);
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    background: rgba(49, 3, 3, 0.7);
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* Container */
+.container {
+    padding: 30px;
+    text-align: center;
+}
+
+/* Table */
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+    background: white;
+    color: black;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #dddddd;
+}
+
+th {
+    background: #0099cc;
+    color: white;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
+    width: 220px;
+}
+
+/* Insight box */
+.insight {
+    margin-top: 30px;
+    padding: 20px;
+    background: #00adcc;
+    color: black;
+    border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <h2>Iris ML</h2>
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/dataset">Dataset</a>
+        <a href="/prediction">Prediction</a>
+        <a href="/contact">Contact</a>
+    </div>
+</div>
+
+<div class="container">
+
+<h1>Iris Dataset Overview</h1>
+<p>This dataset contains measurements of iris flowers used for classification.</p>
+
+<!-- Table -->
+<table>
+<tr>
+<th>Sepal Length</th>
+<th>Sepal Width</th>
+<th>Petal Length</th>
+<th>Petal Width</th>
+<th>Species</th>
+</tr>
+
+<tr><td>5.1</td><td>3.5</td><td>1.4</td><td>0.2</td><td>Setosa</td></tr>
+<tr><td>6.0</td><td>2.2</td><td>4.0</td><td>1.0</td><td>Versicolor</td></tr>
+<tr><td>6.9</td><td>3.1</td><td>5.4</td><td>2.1</td><td>Virginica</td></tr>
+
+</table>
+
+<!-- Feature Cards -->
+<div class="cards">
+
+<div class="card">
+<h3>Sepal Length</h3>
+<p>Outer part length of flower</p>
+</div>
+
+<div class="card">
+<h3>Sepal Width</h3>
+<p>Outer part width</p>
+</div>
+
+<div class="card">
+<h3>Petal Length</h3>
+<p>Inner petal length</p>
+</div>
+
+<div class="card">
+<h3>Petal Width</h3>
+<p>Inner petal width</p>
+</div>
+
+</div>
+
+<!-- Insight -->
+<div class="insight">
+<h3>Key Insight 💡</h3>
+<p>
+Setosa flowers are easily separable because they have very small petal length and width compared to other species.
+</p>
+</div>
+
+</div>
+
+</body>
+</html>
