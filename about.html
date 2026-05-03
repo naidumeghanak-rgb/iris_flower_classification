@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About - Iris Classification</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to right, #4f1e72, #792a98);
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    padding: 40px;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+p {
+    max-width: 700px;
+    margin: auto;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    color: black;
+    border-radius: 15px;
+    width: 260px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Image */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Content */
+.card-content {
+    padding: 15px;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <h2>Iris ML</h2>
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/dataset">Dataset</a>
+        <a href="/prediction">Prediction</a>
+        <a href="/contact">Contact</a>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="container">
+    <h1>About Iris Flower Classification</h1>
+    <p>
+        This project uses Machine Learning to classify Iris flowers into three species
+        based on sepal and petal measurements.
+    </p>
+
+    <div class="cards">
+
+        <!-- Setosa -->
+        <div class="card">
+            <img src="/static/setosa.jpg">
+            <div class="card-content">
+                <h3>🌸 Setosa</h3>
+                <p>
+                    Iris Setosa has small petals and wide sepals.
+                    It is the easiest species to identify and is clearly separable from others.
+                </p>
+            </div>
+        </div>
+
+        <!-- Versicolor -->
+        <div class="card">
+            <img src="/static/versicolor.webp">
+            <div class="card-content">
+                <h3>🌼 Versicolor</h3>
+                <p>
+                    Iris Versicolor has medium-sized petals.
+                    It lies between Setosa and Virginica and is moderately difficult to classify.
+                </p>
+            </div>
+        </div>
+
+        <!-- Virginica -->
+        <div class="card">
+            <img src="/static/virginica.webp">
+            <div class="card-content">
+                <h3>🌺 Virginica</h3>
+                <p>
+                    Iris Virginica has large petals and long sepals.
+                    It is the most complex species and sometimes overlaps with Versicolor.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
