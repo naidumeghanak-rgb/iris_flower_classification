@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Iris ML</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    overflow: hidden;
+}
+
+/* Navbar (hidden initially) */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    background: rgba(0,0,0,0.8);
+    opacity: 0;
+    transition: 1s;
+    z-index: 10;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.show-nav {
+    opacity: 1;
+}
+
+/* Sections */
+.section {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/* Background styles */
+#s1 { background: linear-gradient(to right, #1d2671, #c33764); }
+#s2 { background: linear-gradient(to right, #42275a, #734b6d); }
+#s3 { background: linear-gradient(to right, #134e5e, #71b280); }
+#s4 { background: linear-gradient(to right, #373b44, #4286f4); }
+#s5 { background: linear-gradient(to right, #000428, #004e92); }
+
+.active {
+    opacity: 1;
+}
+
+/* Button */
+.btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #00cc66;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div id="navbar" class="navbar">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/dataset">Dataset</a>
+    <a href="/prediction">Prediction</a>
+    <a href="/contact">Contact</a>
+</div>
+
+<!-- Sections -->
+<div id="s1" class="section active">
+    <h1>Welcome to Iris ML</h1>
+    <p>Flower Classification using Machine Learning</p>
+</div>
+
+<div id="s2" class="section">
+    <h1>About Project</h1>
+    <p>Understand how ML predicts flowers</p>
+</div>
+
+<div id="s3" class="section">
+    <h1>Dataset</h1>
+    <p>Sepal & Petal measurements used</p>
+</div>
+
+<div id="s4" class="section">
+    <h1>Prediction</h1>
+    <p>Enter values to classify flowers</p>
+</div>
+
+<div id="s5" class="section">
+    <h1>Explore More</h1>
+    <p>Use navigation bar to continue</p>
+</div>
+
+<script>
+let sections = document.querySelectorAll(".section");
+let navbar = document.getElementById("navbar");
+
+let index = 0;
+let interval = setInterval(() => {
+
+    sections[index].classList.remove("active");
+    index++;
+
+    if (index < sections.length) {
+        sections[index].classList.add("active");
+    } else {
+        clearInterval(interval);
+
+        // Show last section again
+        sections[sections.length - 1].classList.add("active");
+
+        // Show navbar
+        navbar.classList.add("show-nav");
+    }
+
+}, 3000);
+</script>
+
+</body>
+</html>
